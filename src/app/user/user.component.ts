@@ -6,4 +6,10 @@ import { Component } from "@angular/core";
     
 })
 
-export class UserComponent {}
+export class UserComponent {
+    UserId: number =10;
+    UserStatus: string ="offline";
+    getUserStatus(){
+        return this.UserStatus;
+    }
+}
