@@ -1,11 +1,10 @@
 <div class="my-2">
-    <div class="userinput my-2"><input type="text" class="formcontrol" [(ngModel)]="userName" /></div>
+    <!-- <div class="userinput my-2"><input type="text" class="formcontrol" [(ngModel)]="userName" /></div> -->
     <div class="userinput my-2"><input type="text" class="formcontrol" (input)="onUpdateuser($event)" /></div>
+    <div>{{userName}}</div>
     <button class="btn btn-primary " [disabled]="!allowNewUser" (click)="changeuserCreatedUserStatus()">addUser</button>
-    <div>{{userName }}</div>
+    <div *ngIf="isuserCreated">User is created and the username is {{userName }}</div>
 </div>
-
-
 <div>{{userCreatedStatus}}</div>
 
 <!-- <div>{{allowNewUser}}</div> -->

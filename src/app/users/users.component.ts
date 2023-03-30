@@ -9,6 +9,7 @@ export class UsersComponent implements OnInit {
 allowNewUser:boolean=false;
 userCreatedStatus='no user is created';
 userName='Testuser';
+isuserCreated=false;
 constructor(){
   setTimeout(() => {
     this.allowNewUser = true; 
@@ -16,6 +17,7 @@ constructor(){
 }
 changeuserCreatedUserStatus(){
   this.userCreatedStatus='user is created';
+  this.isuserCreated=true;
 }
 
 onUpdateuser(event: any){
